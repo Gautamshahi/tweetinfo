@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FakeCovid</title>
+    <meta property="og:title" content="FakeCovid" />
+    <meta name="author" content="Gautam Kishore Shahi, Durgesh Nandini" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="About" />
+    <meta property="og:description" content="About Fake news on coronavirus, corona virus, Covid" />
+    <link rel="canonical" href="https://gautamshahi.github.io/FakeCovid/" />
+    <meta property="og:url" content="https://gautamshahi.github.io/FakeCovid/" />
+    <meta property="og:site_name" content="FakeCovid" />
+    <meta property="og:type" content="article" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://gautamshahi.github.io/FakeCovid/assets/img/Proco-icon.png">
+    <meta name="apple-mobile-web-app-title" content="FakeCovid">
+    <meta name="application-name" content="FakeCovid">
+    <meta name="theme-color" content="#ffffff">
+    <style class="inlineCSS">
+        h1 {
+            color: #313237;
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        .dark-bg {
+            background-color: #313237
+        }
+
+        @media only screen and (min-width:48em) {
+            .post-card {
+                width: 48.4375%;
+                margin-right: 3.125%
+            }
+
+            .post-card:last-of-type,
+            .post-card:nth-child(2n+2) {
+                margin-right: 0
+            }
+        }
+
+        html {
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        header,
+        nav,
+        section {
+            display: block
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: .67em 0
+        }
+
+        figure,
+        main {
+            display: block
+        }
+
+        figure {
+            margin: 1em 40px
+        }
+
+        a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects
+        }
+
+        img {
+            border-style: none
+        }
+
+        svg:not(:root) {
+            overflow: hidden
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        html {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        body {
+            -webkit-overflow-scrolling: touch
+        }
+
+        *,
+        ::after,
+        ::before {
+            -webkit-box-sizing: inherit;
+            box-sizing: inherit
+        }
+
+        .site {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            min-height: 100vh;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .site__content {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+            vertical-align: middle
+        }
+
+        figure {
+            margin: 0
+        }
+
+        body {
+            background-color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #343851;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1.25rem
+        }
+
+        h1,
+        h2 {
+            color: #313237;
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        a {
+            color: #277cea;
+            text-decoration: none;
+            border-bottom: 1px dashed #277cea
+        }
+
+        .blur {
+            background: #fff;
+            filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="16" /></filter></svg>#filter');
+            -webkit-filter: blur(1rem);
+            filter: blur(1rem)
+        }
+
+        .container {
+            padding: 0 20px;
+            max-width: 100%;
+            margin: 0 auto
+        }
+
+        @media only screen and (min-width:36em) {
+            .container {
+                max-width: 540px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width:48em) {
+            .container {
+                max-width: 720px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width:62em) {
+            .container {
+                max-width: 960px;
+                margin: 0 auto
+            }
+        }
+
+        @media only screen and (min-width:75em) {
+            .container {
+                max-width: 1170px;
+                margin: 0 auto
+            }
+        }
+
+        .header {
+            background-color: #fff;
+            color: #343851;
+            position: absolute;
+            z-index: 4;
+            width: 100%;
+            top: 0;
+            left: 0;
+            will-change: transform;
+            -webkit-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        .header a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-bottom: 0
+        }
+
+        .header__logo {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+            padding: 19px 0;
+            margin-right: 1.25rem;
+            outline: 0;
+            border-bottom: 0;
+            color: #313237
+        }
+
+        .header__logo .header__logo--container {
+            width: 100px
+        }
+
+        .header__logo .header__logo--container .logo {
+            fill: currentColor
+        }
+
+        .header__inner {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 3.75em;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between
+        }
+
+        .header__links {
+            padding-bottom: .5rem;
+            display: none;
+            position: absolute;
+            top: 3.75em;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background: #fff
+        }
+
+        .header__link {
+            color: #343851;
+            padding: .938rem 0;
+            border-top: 1px solid #ededed
+        }
+
+        .header__toggle {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 44px;
+            height: 100%;
+            background-color: transparent;
+            padding-left: 1.25rem
+        }
+
+        .header__toggle span {
+            display: block;
+            position: relative;
+            margin-top: 4px;
+            background-color: #343851;
+            width: 100%;
+            height: 2px;
+            border-radius: 1px
+        }
+
+        .header__toggle span:first-child {
+            margin-top: 0
+        }
+
+        @media (min-width:62em) {
+            .header__toggle {
+                display: none;
+                visibility: hidden
+            }
+
+            .header__links {
+                position: static;
+                padding: 0;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                visibility: visible;
+                width: auto;
+                height: 100%
+            }
+
+            .header__links-wrapper {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                height: 100%;
+                padding: 0
+            }
+
+            .header__link {
+                position: relative;
+                padding: .938rem 1rem;
+                border: 0;
+                height: 100%
+            }
+
+            .header__link::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                width: 100%;
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                background: #277cea
+            }
+        }
+
+        .post-card {
+            display: block;
+            position: relative;
+            width: 100%;
+            min-height: 250px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #fff;
+            -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+            margin-bottom: 2.25rem;
+            border-bottom: 0
+        }
+
+        @media only screen and (min-width:48em) {
+            .post-card {
+                width: 48.4375%;
+                margin-right: 3.125%
+            }
+
+            .post-card:nth-child(2n+2) {
+                margin-right: 0
+            }
+        }
+
+        @media only screen and (min-width:75em) {
+            .post-card {
+                width: 31.25%;
+                margin-right: 3.125%
+            }
+
+            .post-card:nth-child(2n+2) {
+                margin-right: 3.125%
+            }
+        }
+
+        .post-card__label {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            z-index: 2
+        }
+
+        .post-card__inner {
+            display: block;
+            position: relative;
+            padding: 1.875rem 1.25rem .625rem;
+            width: 100%;
+            color: #838c8d;
+            border-bottom: 0
+        }
+
+        .post-card__header {
+            margin-bottom: .75rem
+        }
+
+        .post-card__meta {
+            font-size: .875rem
+        }
+
+        .post-card__thumb {
+            margin: 0;
+            background: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .post-card__thumb::after {
+            content: "";
+            display: block;
+            height: 0;
+            width: 100%;
+            padding-bottom: 56.25%
+        }
+
+        .post-card__thumb>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block
+        }
+
+        .label {
+            padding: 0 10px;
+            margin-bottom: 1rem;
+            display: inline-block;
+            line-height: 20px;
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, .8);
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 100px
+        }
+
+        .hero {
+            margin: 3rem auto 0;
+            min-height: 15rem;
+            width: 100%;
+            position: relative;
+            background-color: #dde5ea;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: cover
+        }
+
+        @media only screen and (min-width:62em) {
+            .hero {
+                margin: 2.5rem auto;
+                height: 23em
+            }
+        }
+
+        .hero::before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(52, 56, 81, .8)
+        }
+
+        .hero__wrap {
+            position: absolute;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgba(255, 255, 255, .8);
+            width: 100%;
+            max-width: 90%;
+            z-index: 1
+        }
+
+        .hero__wrap .hero__title {
+            font-size: 1.8em;
+            color: #fff
+        }
+
+        .blog {
+            background-color: #f9f9f9
+        }
+
+        .post-list {
+            padding-top: 2.5em;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto
+        }
+
+        @media only screen and (min-width:48em) {
+            .hero__wrap {
+                max-width: 40em
+            }
+
+            .hero__wrap .hero__title {
+                padding: 1rem 0;
+                font-size: 2.625em;
+                line-height: 3.125rem
+            }
+
+            .post-list {
+                padding-top: 5em
+            }
+        }
+    </style>
+    <link rel="preload" href="https://gautamshahi.github.io/FakeCovid/assets/css/main.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://gautamshahi.github.io/FakeCovid/assets/css/main.css"></noscript>
+    <script
+        type="text/javascript"> (function (w) { "use strict"; if (!w.loadCSS) { w.loadCSS = function () { } } var rp = loadCSS.relpreload = {}; rp.support = (function () { var ret; try { ret = w.document.createElement("link").relList.supports("preload") } catch (e) { ret = !1 } return function () { return ret } })(); rp.bindMediaToggle = function (link) { var finalMedia = link.media || "all"; function enableStylesheet() { link.media = finalMedia } if (link.addEventListener) { link.addEventListener("load", enableStylesheet) } else if (link.attachEvent) { link.attachEvent("onload", enableStylesheet) } setTimeout(function () { link.rel = "stylesheet"; link.media = "only x" }); setTimeout(enableStylesheet, 3000) }; rp.poly = function () { if (rp.support()) { return } var links = w.document.getElementsByTagName("link"); for (var i = 0; i < links.length; i++) { var link = links[i]; if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) { link.setAttribute("data-loadcss", !0); rp.bindMediaToggle(link) } } }; if (!rp.support()) { rp.poly(); var run = w.setInterval(rp.poly, 500); if (w.addEventListener) { w.addEventListener("load", function () { rp.poly(); w.clearInterval(run) }) } else if (w.attachEvent) { w.attachEvent("onload", function () { rp.poly(); w.clearInterval(run) }) } } if (typeof exports !== "undefined") { exports.loadCSS = loadCSS } else { w.loadCSS = loadCSS } }(typeof global !== "undefined" ? global : this)) </script>
+    <script
+        type="text/javascript"> function getJson(url) { return JSON.parse($.ajax({ type: 'GET', url: url, dataType: 'json', global: false, async: false, success: function (data) { return data; } }).responseText); } function buildDataTable() { var leaderboard = []; leaderboard.push(getJson("https://yjw.wh98.me:8080")[0]); var tr; $("#leaderboardtable").empty(); var columnSet = []; var headerTr$ = $('<tr/>'); var headers = leaderboard[0].headers; headerTr$.append($('<th/>').html("participant")); for (var j = 0; j < headers.length; j++) { headerTr$.append($('<th/>').html(headers[j].label)); } $("#leaderboardtable").append(headerTr$); for (var i = 0; i < leaderboard[0].scores.length; i++) { tr = $('<tr/>'); tr.append("<td>" + leaderboard[0].scores[i][1].username + "</td>"); values = leaderboard[0].scores[i][1].values; for (var j = 0; j < values.length; j++) { tr.append("<td>" + values[j].val + "</td>"); } $('#leaderboardtable').append(tr); } console.log(leaderboard) } </script>
+    <script type="text/javascript">
+        function checkAllBox(obj) {
+            var train_set = document.getElementById("train-set");
+            var dev_set = document.getElementById("dev-set");
+            console.log(obj, obj.checked)
+            if (obj.checked == true) {
+                train_set.disabled = false;
+                dev_set.disabled = false;
+            }
+            else {
+                train_set.disabled = true;
+                dev_set.disabled = true;
+            }
+        }
+    </script>
+    <!-- <script type="text/javascript"> 
+        window.onload = function (){ 
+            buildDataTable();
+            var term_agree = document.getElementById("TermAgree");
+            checkAllBox(term_agree);
+        } </script> -->
+</head>
+
+<body class="site">
+    <header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
+        <div class="container">
+            <div class="header__inner"> <a class="header__logo" href="/">
+                    <div class="header__logo--container">
+                        <!-- <svg width="60px" height="153px" viewBox="10 0 277 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="logocon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="LucidaGrande, Lucida Grande" font-size="100" font-weight="normal">
+                                <g id="logo" transform="translate(-14.000000, -69.000000)" fill="#515556">
+                                    <text id="FakeCovid">
+                                        <tspan x="18" y="179">FakeCovid</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </svg> -->
+                        <img style="max-width:200%; width:90px;"
+                            src="https://gautamshahi.github.io/FakeCovid/assets/img/logo.png">
+                    </div>
+                </a>
+                <nav class="header__links">
+                    <div class="container header__links-wrapper">
+			    <a class="header__link" href="#aboutfakecovid" itemprop="url">
+				 <span itemprop="name">About FakeCovid</span> 
+			    </a>
+			    <a class="header__link" href="#downloaddata" itemprop="url">
+                              <span itemprop="name">Download</span> 
+			    </a>
+			    <a class="header__link" href="#relatedwork" itemprop="url">
+				    <span itemprop="name">Related/Ongoing Work</span> 
+			    </a>
+			<!--    <a class="header__link" href="#dataannotation" itemprop="url">
+				    <span itemprop="name">Data Annotation</span> 
+			    </a>
+			    <a class="header__link" href="#datacleaning" itemprop="url">
+				    <span itemprop="name">Data Cleaning, Processing, Exploration</span> 
+			    </a>
+			    <a class="header__link" href="#evaluation-leaderboard" itemprop="url"> 
+				    <span itemprop="name">Leaderboard</span> 
+			    </a> -->
+			</div>
+			    </nav>
+                <div class="header__toggle"> <span></span> <span></span> <span></span></div>
+            </div>
+        </div>
+    </header>
+    <div class="hero lazyload" data-bg="https://gautamshahi.github.io/FakeCovid/assets/img/Covid-Header.jpg">
+        <div class="hero__wrap">
+            <div class="hero__categories"></div>
+            <h1 class="hero__title">FakeCovid: Fact Checked data for COVID-19</h1>
+            <p class="hero__meta"> <span> A Multilingual Cross-domain Fact Check News Dataset for COVID-19 </span></p>
+        </div>
+    </div>
+    <main class="site__content">
+        <div class="container">
+            <article class="post-content" style="text-align:justify;">
+                <h1 id="aboutfakecovid">About FakeCovid</h1>
+                <p><strong>FakeCovid</strong> is the first multilingual cross-domain dataset of 7623 fact-checked news articles for COVID-19, collected from 04/01/2020 to 01/07/2020(with a monthly update). 
+                    We have collected the fact-checked articles from 92 fact-checking websites after obtaining references from Poynter and Snopes. 
+                    We have manually annotated the collected articles into 11 categories of the fact-checked news according to their content. 
+                    The ultimately generated dataset is in 40 languages from 105 countries. We have built a classifier to detect fake news and predict its class. Our model achieves an
+                     F1 score of 0.76 to detect the false class and other fact check articles. 
+                     For more detailed information about the FakeCovid dataset, you can refer to the following paper:</p>
+                <div class="button-container">
+                    <button class="button button-pill button-primary"
+			    onclick="location.href='http://workshop-proceedings.icwsm.org/abstract?id=2020_14'">
+                        <strong>FakeCovid paper (Shahi & Nandini, 2020)</strong>
+                    </button>
+                </div>
+                <p style="color:red"><b>DATA COLLECTION UPDATE:</b></p> <p><b>We crawl the fact check articles published on the fact-checking websites at regular intervals and release an updated dataset each month. Some details are mentioned below:</b></p>
+            <table style="width:50%">
+                <tr>
+                  <th>Last Updated On</th>
+                  <th>Data Count</th> 
+                </tr>
+                <tr>
+                  <td>08-06-2020</td>
+                  <td>5182</td>
+                </tr>
+                <tr>
+                  <td>13-07-2020</td>
+                  <td>7623</td>
+                </tr>
+              </table>
+            <p>If you are interested in using this dataset in your research work, welcome to cite this paper:</p>
+		    
+		   <p> @inproceedings{shahifakecovid,<br>
+  title={Fake{C}ovid -- A Multilingual Cross-domain Fact Check News Dataset for COVID-19},<br>
+  author={Shahi, Gautam Kishore and Nandini, Durgesh},<br>
+  booktitle={Workshop Proceedings of the 14th International {AAAI} {C}onference on {W}eb and {S}ocial {M}edia},<br>
+  year = {2020},<br>
+  url = {http://workshop-proceedings.icwsm.org/pdf/2020_14.pdf}<br>
+} <br>
+</p>
+               
+		
+
+                <h1 id="downloaddata">Download</h1>
+                <p>The FakeCovid dataset is free to download for research purposes under 
+                   <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0
+                        License Terms</a>. 
+		Before you download the dataset, please read these terms and click below button to confirm that you agree to them.
+                </p>
+                <div style="text-align: center;">
+                    <label>
+                        <input style="width: 1.5rem" type="checkbox" name="TermAgree" id='TermAgree' value="false"
+                            onClick="checkAllBox(this)">I agree to the Terms & Conditions.
+                    </label>
+                </div>
+		<br>
+                <div class="button-container">
+                    <button class="button button-pill button-border" disabled id='train-set'
+                        onclick="location.href='https://github.com/Gautamshahi/FakeCovid/blob/master/data/FakeCovid_July2020.csv';">
+                        <strong>FakeCovid Dataset</strong>
+                    </button></div>
+                <!--<div class="button-container">
+                    <button class="button button-pill button-border" disabled id='dev-set'
+                        onclick="location.href='https://mind201910small.blob.core.windows.net/release/MINDsmall_dev.zip';">
+                        <strong>Validation Set</strong>
+                    </button>
+                </div>
+				<p>For more details about the data formats, please refer to this document:</p>
+				<div class="button-container">
+                    <button class="button button-pill button-border"
+                        onclick="location.href='https://github.com/msnews/msnews.github.io/blob/master/assets/doc/introduction.md';">
+                        <strong>Dataset Description</strong>
+                    </button>
+                </div>
+            
+                <br>
+		<p>
+		The implementation of several existing news recommendation methods and general recommendation methods 
+		    can be found at <a href="https://github.com/microsoft/recommenders">Microsoft Recommenders</a>. 
+		</p>-->
+             <!--    <br><br>
+				<h1 id="datacollection">Data Collection</h1>
+                <p> For data collection, we used the <strong>Poynter and Snopes</strong> as a
+bridge to get the links to the original fact-checking website.
+The steps involved in the process of data collection:</p>
+<p><strong>Fact-check articles</strong> We weekly scraped the list of factchecked news mentioned at reference sources (Poynter &
+Snopes) and collected the list of the fact-checked news
+articles mentioned on their website. We have assigned a
+unique identifier to each of them and its denoted by FCID.</p>
+<p><strong>Source of articles</strong> From the list of fact-checked news
+articles, we fetched the reference to the source of the
+fact-checked article which was published by the Poynter
+and Snopes. This is represented by article source.</p>
+<p><strong>Title</strong> From the collected link, we fetched the tile of the news
+article. In many cases, the title provided by the reference
+provided(Poynter & Snopes) is different from the original
+title given by the fact-checking website. Title provided
+by the reference provide is defined by reference title and
+denoted by ref title. Similarly, source title is defined source
+title and represented as source title.</p>
+<p><strong>Published Date</strong> We collected the published date, which
+refers to the date of publication of fact-checked articles
+by the fact-checking websites. It is represented by published date.</p>
+<p><strong>Content of articles</strong> Once we have a source of a news
+article, then we used Beautiful shop (Richardson 2007),
+python-based library to crawl the HTML Document Object
+Model(DOM) to gather other information like textual content, country, date of the article. It is defined by source title.</p>
+<p><strong>Class</strong> The fact checking website assign a class for each
+fact checked article. Each fact checking website have a set
+of classes designed by them, for instance the classes may
+be ’true’, ’false’, ’partially false’ meaning that the article
+is true, false or partially false respectively. The articles are
+then elucidated by them into one of their designed classes.
+A detailed description is mentioned in table 6. This attribute
+is denoted by class.</p>
+<p><strong>Social media link</strong> Fake news is primarily circulated over
+social media to be spread among a large number of people,
+and the fact-checker provides a reference to social media
+posts, so we have collected the presence of social media
+on the fact-checked articles. Once we extracted the content
+from the web page, we looked for the social media presence
+in the news article. To check the twitter presence, we
+look for keyword twitter and status in the hyperlink. For
+YouTube, we look for the keywords ”youtube” and ”watch”.
+For Reddit, we look for the keyword ”Reddit” and the
+pattern ”reddit.com/r/” using regex. Similarly we check the
+presence of Facebook and Instagram using regex pattern.
+This property is denoted by SM Link.</p>
+<p><strong>Fact checking website</strong> From the fact-checked references,
+we also fetch the source of the article, which is the factchecking company. This property is denoted by verifiedby.</p>
+<p><strong>Country</strong> We fetched the country of the articles, which tells
+in which country the article was circulated. Some
+es the
+same articles were circulated in several countries. In our
+dataset, the maximum number of countries that an article
+appeared to be circulated around was four, hence we divided
+the country attribute into 4 sub attributes, namely country1,
+country2,country3 and country4 to identify each country
+separately.</p>
+<p><strong>Category</strong> Fake news are circulated regarding several topics
+for instance, origin or virus, or international response. The
+category attribute has been used to denote under which
+topic the article falls into. The value of the attribute has
+been assigned by us after manually annotating the articles.
+A detailed description of the annotations is mentioned in
+section ”Data Annotation”.</p>
+<p><strong>Language</strong> The fact check articles are circulated in different
+countries in several languages. To identify the language
+of the article we created the attribute lang which denotes
+the language of the fact checked articles. The process of
+language detection is discussed in section ”Data cleaning
+and Prepossessing”.</p>
+
+<p>We have collected 5182 articles circulated in 105
+countries from 92 fact-checkers. Articles published were
+from 04.01.2020 to 15.05.2020 in 40 languages among
+which 40.8 % articles are in the English language.
+</p>
+
+<br><br>
+
+<h1 id="dataannotation">Data Annotation</h1>
+                <p>For annotation of news articles, we selected
+three people, based on background knowledge and linguistic
+knowledge. Data is being annotated by one annotator and the
+second annotator annotates the randomly chosen news article according to the language to calculate the intercoder reliability (Lombard, Snyder-Duch, and Bracken 2002) agreement.
+</p>
+
+<br><br>
+<h1 id="datacleaning">Data Cleaning, Processing and Exploration</h1>
+                <p><strong>Data Cleaning:</strong> To remove unwanted information from the collected data, articles with faulty URLs, a missing title or duplicates have been excluded.</p>
+				<p><strong>Data Processing:</strong> In this step, we applied the basic Natural Language Processing(NLP) preprocessing techniques to remove unwanted
+information from the data like lowercase, removal of short word, tokenization etc. We performed language detection using langdetect and spelling correction using Textblob.</p>
+				<p><strong>Data Exploration:</strong> We performed the exploratory analysis of the dataset regarding circulation across countries and languages, fact-checking websites, word distributions and social media links, as displayed in the images below. Find more info in the FakeCovid paper, found via the button below.</p>
+		<div class="button-container">
+                    <button class="button button-pill button-primary"
+			    onclick="location.href='./assets/doc/FakeCovid.pdf';">
+                        <strong>FakeCovid paper (Shahi & Nandini, 2020)</strong>
+                    </button>
+                </div>
+		<br>
+		<div>
+					<figure style="max-width:400px;float:left;margin-right:50px">
+						<img src="https://gautamshahi.github.io/FakeCovid/assets/img/factcheker.png" stye="min-widht:284" height="auto">
+						<figcaption style="text-align:center;">Figure 1: Distribution of Top 10 fact-checking websites</figcaption>
+					</figure>
+					<figure style="max-width:400px;float:left">
+						<img src="https://gautamshahi.github.io/FakeCovid/assets/img/lang_dist.png" width="200" height="auto">
+						<figcaption style="text-align:center;">Figure 2: Distribution of Top 10 languages of the fact-checking articles</figcaption>
+					</figure>
+					<figure width="200" style="float:left">
+						<img src="https://gautamshahi.github.io/FakeCovid/assets/img/wordcloud.png" width="200" height="auto">
+						<figcaption style="text-align:center;">Figure 3: Wordcloud of the Top 100 words used in the dataset</figcaption>
+					</figure>
+			 	</div>
+-->
+	<!--	<p> For getting the data from previous month, please refer to the below link: </p>
+			<div class="button-container">
+                    <button class="button button-pill button-border"
+                        onclick="location.href='https://github.com/Gautamshahi/FakeCovid/tree/master/data';">
+                        <strong>Old FakeCovid Dataset</strong>
+                    </button>
+                </div>   -->
+		    <p> We also explained the steps followed to collect the data
+                from different fact-checking websites. We have used the
+                <a href="https://www.poynter.org/ifcn-covid-19-misinformation/">Poynter</a> and <a href="https://www.snopes.com/collections/">Snopes</a> as reference data source for taking a reference to the fact
+                checking websites. For more details about the data collection, please refer to this document: </p>
+			<div class="button-container">
+                    <button class="button button-pill button-border"
+                        onclick="location.href='https://github.com/Gautamshahi/FakeCovid/blob/master/introduction.md';">
+                        <strong>Dataset Description</strong>
+                    </button>
+                </div>
+       
+	    
+        <h1 id="relatedwork">Related/Ongoing Work</h1>
+               <p>Related to this work, we also analysed the propogation of misinformation on Twitter, for more details please visit:</p>
+		    
+		   <p> <strong> <a href="https://www.sciencedirect.com/science/article/abs/pii/S2468696420300458"> An Exploratory Study of COVID-19 Misinformation on Twitter</a> </strong> by Gautam Kishore Shahi, Anne Drikson and Tim A Majchrzak. For more details, please visit our GitHub page <a href="https://github.com/Gautamshahi/Misinformation_COVID-19">Misinformation_COVID-19</a>.</p>
+                    </button>
+		<strong> How do I cite this work? </strong> For now, cite the paper as: <br>
+		<br>
+			@article{shahi2021exploratory,<br>
+  title={An exploratory study of covid-19 misinformation on twitter},<br>
+  author={Shahi, Gautam Kishore and Dirkson, Anne and Majchrzak, Tim A},<br>
+  journal={Online social networks and media},<br>
+  volume={22},<br>
+  pages={100104},<br>
+  year={2021},<br>
+  publisher={Elsevier}
+}
+		
+		<br>
+		</p>
+ <p> <strong> <a href="https://arxiv.org/pdf/2010.00502.pdf"> AMUSED: An Annotation Framework of Multi-modal Social Media Data</a> </strong> by Gautam Kishore Shahi.</p>
+                   <strong> How do I cite this work? </strong> For now, cite the arXiv paper as: <br>
+		<br>
+			
+	    @misc{2010.00502, <br>
+Author = {Gautam Kishore Shahi},<br>
+Title = {AMUSED: An Annotation Framework of Multi-modal Social Media Data},<br>
+Year = {2020},<br>
+Eprint = {arXiv:2010.00502},<br>
+}   
+	    <br>
+	
+<p> <strong> <a href="#"> The Networked Context of COVID-19 Misinformation:Informational Homogeneity on YouTube at the Beginning of the Pandemic</a> </strong> by Daniel Röchert, Gautam Kishore Shahi, German Neubaum, Björn Ross, Stefan Stieglitz. For more details, please visit our GitHub page <a href="#">Misinformation_YouTube_COVID-19</a>.</p>
+                    </button>
+		<strong> How do I cite this work? </strong> For now, cite the paper as: <br>
+		<br>
+			@article{Röchert2021,<br>
+  title={The Networked Context of COVID-19 Misinformation:Informational Homogeneity on YouTube at the Beginning of the Pandemic},<br>
+  author={Röchert, Daniel and Shahi, Gautam Kishore and Neubaum, German and Ross, Björn and Stieglitz, Stefan A},<br>
+  journal={Online social networks and media},<br>
+  volume={25},<br>
+  pages={2000208},<br>
+  year={2021},<br>
+  publisher={Elsevier}
+}
+		
+		<br>
+		</p>
+	 
+	    <div class="relatedwork">
+                   
+                </div>
+ </div>
+           </article>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <a href="https://www.uni-due.de/digicat/index_en.php">©2021 Digital Communication and Transformation</a>
+        </div>
+    </footer>
+    <script async src="https://gautamshahi.github.io/FakeCovid/assets/js/bundle.js"></script>
+
+</body>
+
+</html>
