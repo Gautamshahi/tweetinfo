@@ -1,4 +1,4 @@
-tweetid,lang,Country,hatespeech,sentiment_score_round,category_text,verified,Misinformation,misinformation_source_url
+tweetid,lang,Country,hatespeech,sentiment_score,category_text,verified,Misinformation,misinformation_source_url
 546362165175648256,en,,0,positive,sexism,FALSE,,
 572329328664448960,en,United States,1,neutral,none,FALSE,,
 466599362081333248,en,,0,neutral,sexism,FALSE,,
