@@ -16,7 +16,7 @@ The dataset is shared by following the Twitter data sharing policy. The descript
 
 #### How do I cite this work?
 
-Please cite the [SocInfo paper]([https://doi.org/10.1016/j.osnem.2020.100104](https://www.researchgate.net/publication/363258449_Mitigating_Harmful_Content_on_Social_Media_Using_An_Interactive_User_Interface)):
+Please cite the [SocInfo paper](https://www.researchgate.net/publication/363258449_Mitigating_Harmful_Content_on_Social_Media_Using_An_Interactive_User_Interface):
 
 ```
 @article{shahi2021exploratory,
