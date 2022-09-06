@@ -28,5 +28,3 @@ Please cite the [SocInfo paper]([https://doi.org/10.1016/j.osnem.2020.100104](ht
   organization={Springer}
 }
 ```
-}
-```
