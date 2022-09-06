@@ -16,16 +16,17 @@ The dataset is shared by following the Twitter data sharing policy. The descript
 
 #### How do I cite this work?
 
-Please cite the [OSNEM paper](https://doi.org/10.1016/j.osnem.2020.100104):
+Please cite the [SocInfo paper]([https://doi.org/10.1016/j.osnem.2020.100104](https://www.researchgate.net/publication/363258449_Mitigating_Harmful_Content_on_Social_Media_Using_An_Interactive_User_Interface)):
 
 ```
 @article{shahi2021exploratory,
-  title={An exploratory study of covid-19 misinformation on twitter},
-  author={Shahi, Gautam Kishore and Dirkson, Anne and Majchrzak, Tim A},
-  journal={Online Social Networks and Media},
-  volume={22},
-  pages={100104},
-  year={2021},
-  publisher={Elsevier}
+  title={Mitigating Harmful Content on Social Media Using An Interactive User Interface},
+  author={Shahi, Gautam Kishore and Dirkson, Kana Tsoplefack, William},
+  booktitle={International Conference on Social Informatics},
+  pages={},
+  year={2022},
+  organization={Springer}
+}
+```
 }
 ```
