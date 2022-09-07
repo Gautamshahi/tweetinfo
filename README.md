@@ -19,7 +19,7 @@ The dataset is shared by following the Twitter data sharing policy. The descript
 Please cite the [SocInfo paper](https://www.researchgate.net/publication/363258449_Mitigating_Harmful_Content_on_Social_Media_Using_An_Interactive_User_Interface):
 
 ```
-@article{shahi2021exploratory,
+@article{tweetinfo2022,
   title={Mitigating Harmful Content on Social Media Using An Interactive User Interface},
   author={Shahi, Gautam Kishore and Dirkson, Kana Tsoplefack, William},
   booktitle={International Conference on Social Informatics},
